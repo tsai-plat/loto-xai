@@ -14,8 +14,10 @@
     "multi:build": "pnpm tsc-multi",
     "tsc:esm": "tsc -p tsconfig.esm.json",
     "tsc:cjs": "tsc -p tsconfig.cjs.json",
+    "commitlint": "commitlint --config commitlint.config.ts -e -v",
     "format": "prettier \"**/**/*.{ts,js,json,tsx,mjs}\" --ignore-path ./.prettierignore --write",
     "lint": "eslint \"src/**/*.ts\" --fix",
+    "lint-staged": "lint-staged",
     "test": "jest --config ./jest.config.ts --runInBand --colors",
     "prepare": "husky"
   },
@@ -71,5 +73,10 @@
     "tsc-multi": "^1.1.0",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.23.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,mjs,cjs,tsx,json,html,vue,jsx,scss,less,css}": [
+      "pnpm run lint"
+    ]
   }
 }

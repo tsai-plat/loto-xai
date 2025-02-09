@@ -1,9 +1,7 @@
-import type {UserConfig} from '@commitlint/types'
+import type { UserConfig } from '@commitlint/types';
 
-const configuration:UserConfig = {
-  extends:[
-    '@commitlint/config-conventional'
-  ],
+const configuration: UserConfig = {
+  extends: ['@commitlint/config-conventional'],
   rules: {
     'scope-case': [
       2,
@@ -37,5 +35,5 @@ const configuration:UserConfig = {
     ],
     'subject-empty': [2, 'never'],
   },
-}
-export default configuration
+};
+export default configuration;
