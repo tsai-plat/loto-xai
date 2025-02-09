@@ -3,7 +3,7 @@
   "changelog": [
     "@changesets/changelog-github",
     {
-      "repo":"tsai-plat/loto-xai"
+      "repo": "tsai-plat/loto-xai"
     }
   ],
   "commit": false,
