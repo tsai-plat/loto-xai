@@ -4,4 +4,4 @@
 
 ### Patch Changes
 
-- feat: first initialize project
+- First initialize TS library project
