@@ -51,6 +51,8 @@
   },
   "homepage": "https://github.com/tsai-plat/loto-xai#readme",
   "devDependencies": {
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.12",
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
     "@commitlint/types": "^19.5.0",
@@ -75,7 +77,7 @@
     "typescript-eslint": "^8.23.0"
   },
   "lint-staged": {
-    "*.{js,ts,tsx,json,html,vue,jsx,scss,less,css}":[
+    "*.{js,ts,tsx,json,html,vue,jsx,scss,less,css}": [
       "prettier \"**/**/*.{ts,js,json,tsx,mjs,vue,scss,less,css,html}\" --ignore-path ./.prettierignore --write"
     ],
     "*.{js,ts,tsx,json,html,vue,jsx}": [
