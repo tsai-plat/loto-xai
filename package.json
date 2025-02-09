@@ -9,7 +9,7 @@
   "scripts": {
     "postinstall": "npx only-allow pnpm",
     "prebuild": "rimraf dist types",
-    "clean": "rimraf dist types",
+    "clean": "rimraf dist types coverage",
     "build": "pnpm clean && pnpm tsc:esm && pnpm tsc:cjs",
     "multi:build": "pnpm tsc-multi",
     "tsc:esm": "tsc -p tsconfig.esm.json",
@@ -75,7 +75,10 @@
     "typescript-eslint": "^8.23.0"
   },
   "lint-staged": {
-    "*.{js,ts,mjs,cjs,tsx,json,html,vue,jsx,scss,less,css}": [
+    "*.{js,ts,tsx,json,html,vue,jsx,scss,less,css}":[
+      "prettier \"**/**/*.{ts,js,json,tsx,mjs,vue,scss,less,css,html}\" --ignore-path ./.prettierignore --write"
+    ],
+    "*.{js,ts,tsx,json,html,vue,jsx}": [
       "pnpm run lint"
     ]
   }

@@ -20,6 +20,7 @@ export default tseslint.config({
     'node_modules',
     '.vscode',
     'tsconfig.json',
+    'tsconfig.*.json',
     'package.json',
     '.*',
     'commitlint.config.mjs',
@@ -34,6 +35,8 @@ export default tseslint.config({
   plugins: {},
   rules: {
     'arrow-body-style': 'warn',
+    'no-unused-expressions': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    // "@typescript-eslint/no-unused-expressions": "off"
   },
 });
