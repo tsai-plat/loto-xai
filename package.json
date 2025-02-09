@@ -1,0 +1,26 @@
+{
+  "name": "@tsailab/loto-xai",
+  "version": "0.0.1",
+  "description": "The loto-xai is an openai nodejs sdk compatible extension library.",
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "npm": {
+    "publish": false
+  },
+  "scripts": {
+    "postinstall": "npx only-allow pnpm",
+    "prebuild": "rimraf dist types",  
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "openai-node",
+    "nestjs",
+    "sse",
+    "streaming"
+  ],
+  "author": "",
+  "license": "ISC"
+}
