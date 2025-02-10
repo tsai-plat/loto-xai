@@ -1,4 +1,3 @@
 #!/bin/sh
 
 npx --no-install pnpm format
-npx --no-install pnpm build

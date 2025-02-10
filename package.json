@@ -1,6 +1,6 @@
 {
   "name": "@tsailab/xai",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The loto-xai is an openai nodejs sdk compatible extension library.",
   "main": "dist/cjs/index.js",
   "types": "types/index.d.ts",
@@ -21,10 +21,11 @@
     "lint-staged": "lint-staged",
     "test": "jest --config ./jest.config.ts --runInBand --colors",
     "change:empty": "changeset add --empty",
-    "prerelease": "pnpm format && pnpm build && pnpm test",
+    "prerelease": "pnpm format && pnpm build && pnpm test && pnpm vp",
     "publish:only": "changeset publish --registry=https://registry.npmjs.com/",
-    "vp": "pnpm pre-release && pnpm changeset version",
+    "vp": "pnpm changeset version",
     "release": "pnpm publish:only",
+    "postrelease":"pnpm push:changelog",
     "push:changelog": "node build/scripts/push-changelog.mjs",
     "prepare": "husky"
   },
