@@ -11,7 +11,7 @@
     "prebuild": "rimraf dist types",
     "clean": "rimraf dist types coverage",
     "build": "pnpm clean && pnpm tsc:esm && pnpm tsc:cjs",
-    "build:only":"pnpm tsc:esm && pnpm tsc:cjs",
+    "build:only": "pnpm tsc:esm && pnpm tsc:cjs",
     "multi:build": "pnpm tsc-multi",
     "tsc:esm": "tsc -p tsconfig.esm.json",
     "tsc:cjs": "tsc -p tsconfig.cjs.json",
@@ -20,10 +20,10 @@
     "lint": "eslint \"src/**/*.ts\" --fix",
     "lint-staged": "lint-staged",
     "test": "jest --config ./jest.config.ts --runInBand --colors",
-    "change:empty":"changeset add --empty",
-    "pre-release":"pnpm clean && pnpm test && build:only",
+    "change:empty": "changeset add --empty",
+    "pre-release": "pnpm clean && pnpm test && build:only",
     "publish:only": "changeset publish --registry=https://registry.npmjs.com/",
-    "release":"pnpm pre-release && pnpm publish:only",
+    "release": "pnpm pre-release && pnpm publish:only",
     "prepare": "husky"
   },
   "publishConfig": {

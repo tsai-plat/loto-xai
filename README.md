@@ -18,3 +18,9 @@
 ```
 $ npm install -g @tsailab/loto-xai
 ```
+
+## Contribution 
+
+> the `Code` submission specifications follow angular standards
+
+> you can visit [rules](https://github.com/tsai-plat/.github/blob/main/wiki/commit-rules.md) link,see more infomation. 
