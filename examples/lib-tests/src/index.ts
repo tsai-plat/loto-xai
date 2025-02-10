@@ -1,3 +1,3 @@
-export function test(){
-  const data:SseMessageChunkData  = {}
+export function test() {
+  const data: SseMessageChunkData = {};
 }
