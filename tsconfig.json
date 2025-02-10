@@ -22,6 +22,7 @@
     "strictFunctionTypes": true,
     "strictBindCallApply": true,
     "strictPropertyInitialization": true,
+    "allowSyntheticDefaultImports": true,
 
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },

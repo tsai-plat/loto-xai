@@ -39,7 +39,7 @@ $ npm install -g @tsailab/xai
 
 ## License
 
-The @Tsailab/loto-xai packages is [MIT licensed](LICENSE).
+The @Tsailab/xai packages is [MIT licensed](LICENSE).
 
 > Give me a cup of coffee? Thanks much.
 

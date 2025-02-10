@@ -16,3 +16,17 @@ export type SseMessageChunkData = {
   finish_reason?: string | null;
   [k: string]: any;
 };
+
+/**
+ * @public
+ *  xai SSE ERROR message data struct
+ * @property id is ai provider return chunk id
+ * @property errcode: proxy logic transform error sign witch provider
+ *  maybe after call ai chat.completion but does't connecting ai provider
+ */
+export type SseErrorData = {
+  id?: string;
+  errcode?: string;
+  errmsg:string
+  [k:string]:any
+}
