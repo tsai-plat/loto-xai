@@ -24,6 +24,7 @@
     "pre-release": "pnpm clean && pnpm test && build:only",
     "publish:only": "changeset publish --registry=https://registry.npmjs.com/",
     "release": "pnpm pre-release && pnpm publish:only",
+    "vp":"pnpm pre-release && npx changeset version",
     "prepare": "husky"
   },
   "publishConfig": {
