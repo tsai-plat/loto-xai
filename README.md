@@ -43,6 +43,6 @@ The @Tsailab/loto-xai packages is [MIT licensed](LICENSE).
 
 > Give me a cup of coffee? Thanks much.
 
-![Wechat QRCode](wechat-toll.png)
+![Wechat QRCode](./docs/assets/wechat-toll.png)
 
-![Etherum](./0x01dc42c9a940a2517b23fd9a3c26c2f30935da59.png)
+![Etherum](./docs/assets/0x01dc42c9a940a2517b23fd9a3c26c2f30935da59.png)
