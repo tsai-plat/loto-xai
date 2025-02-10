@@ -44,10 +44,14 @@ The @Tsailab/loto-xai packages is [MIT licensed](LICENSE).
 > Give me a cup of coffee? Thanks much.
 
 <center>
-  <span> 
+  <span>
+    <div>
     <img src="https://ucarecdn.com/8dd30913-02fb-4d06-b341-759e186a611a/lanberyethda59.png" width="100" height="100" alt="My ETH"/>
-    My ETH
+      <h3>My ETH</h3>
+    </div>
+    
   </span>
+  <span> OR </span>
 
   <span>
     <img src="https://ucarecdn.com/f0adc5e7-0b87-4f9a-825a-166a480a9bc8/lanberywechattoll.png" width="100" height="100" alt="My WECHAT"/>
