@@ -24,3 +24,25 @@ $ npm install -g @tsailab/loto-xai
 > the `Code` submission specifications follow angular standards
 
 > you can visit [rules](https://github.com/tsai-plat/.github/blob/main/wiki/commit-rules.md) link,see more infomation. 
+
+------
+
+## Stay in touch
+
+- Twitter - [@lamborghini171](https://twitter.com/lamborghini171)
+
+:revolving_hearts::revolving_hearts::revolving_hearts: :raising_hand: :raising_hand: :raising_hand: :raising_hand: :raising_hand: :raising_hand: :raising_hand: :raising_hand: :raising_hand: :raising_hand: :raising_hand: :raising_hand::raising_hand::raising_hand::revolving_hearts::revolving_hearts::revolving_hearts:
+
+<font color="#ff8f00"><h3>Sincerely invite experts to improve the project functions together !</h3></font>
+
+:revolving_hearts::revolving_hearts::revolving_hearts: :raising_hand: :raising_hand: :raising_hand: :raising_hand: :raising_hand: :raising_hand: :raising_hand: :raising_hand: :raising_hand: :raising_hand: :raising_hand: :raising_hand::raising_hand::raising_hand::revolving_hearts: :revolving_hearts::revolving_hearts:
+
+## License
+
+The @Tsailab/loto-xai packages is [MIT licensed](LICENSE).
+
+> Give me a cup of coffee? Thanks much.
+
+![Wechat QRCode](wechat-toll.png)
+
+![Etherum](./0x01dc42c9a940a2517b23fd9a3c26c2f30935da59.png)
