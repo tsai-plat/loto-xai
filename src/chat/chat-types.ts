@@ -29,6 +29,16 @@ export type OpenaiChatBody = {
   [k: string]: any;
 };
 
+export type XaiChatExtraData = {
+  reqid: string;
+  uno?: string;
+  username?: string;
+  ip?: string;
+  cliid?: string | string[];
+  msgid?: string;
+  [k: string]: any;
+};
+
 /**
  * @public
  *  xai streaming request body properties
@@ -36,6 +46,7 @@ export type OpenaiChatBody = {
  * @property uuid refer backend prompt template uuid
  * @property text front user input text
  * @property compatible openai beta like systemMessage
+ * @property extra is request header and extra data
  */
 export type XaiChatRequestBody = {
   chatid: string;
@@ -43,4 +54,5 @@ export type XaiChatRequestBody = {
   uuid?: number;
   text?: string;
   instructions?: string;
+  extra?: XaiChatExtraData;
 } & OpenaiChatBody;

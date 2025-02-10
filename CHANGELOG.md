@@ -1,5 +1,11 @@
 # @tsailab/xai
 
+## 0.0.5
+
+### Patch Changes
+
+- Feat: add Request extra
+
 ## 0.0.4
 
 ### Patch Changes
