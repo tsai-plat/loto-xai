@@ -27,6 +27,6 @@ export type SseMessageChunkData = {
 export type SseErrorData = {
   id?: string;
   errcode?: string;
-  errmsg:string
-  [k:string]:any
-}
+  errmsg: string;
+  [k: string]: any;
+};
