@@ -46,7 +46,7 @@ The @Tsailab/loto-xai packages is [MIT licensed](LICENSE).
 <center>
   <span> 
     <img src="https://ucarecdn.com/8dd30913-02fb-4d06-b341-759e186a611a/lanberyethda59.png" width="100" height="100" alt="My ETH"/>
-    <h3>My ETH</h3>
+    My ETH
   </span>
 
   <span>
