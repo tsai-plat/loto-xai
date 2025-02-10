@@ -43,6 +43,10 @@ The @Tsailab/loto-xai packages is [MIT licensed](LICENSE).
 
 > Give me a cup of coffee? Thanks much.
 
+<center>
+  <img src="https://ucarecdn.com/8dd30913-02fb-4d06-b341-759e186a611a/lanberyethda59.png" width="100" height="100" alt="My Wechat"/>
+</center>
+
 ![Wechat QRCode](./docs/assets/wechat-toll.png =100x100)
 
 ![Etherum](./docs/assets/0x01dc42c9a940a2517b23fd9a3c26c2f30935da59.png =100x100)
