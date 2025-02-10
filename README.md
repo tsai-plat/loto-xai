@@ -1,4 +1,4 @@
-<h1 align="center">@tsailab/loto-xai</h1>
+<h1 align="center">@tsailab/xai</h1>
 <p align="center" >
   <a href="https://github.com/tsai-plat" target="blank">
     <img src="https://ucarecdn.com/eac2c945-177d-4fc9-8bc1-fa2be48ad3a2/lotolab_golden.svg" width="100" alt="Tsai Logo" />
@@ -16,7 +16,7 @@
 ## Installation
 
 ```
-$ npm install -g @tsailab/loto-xai
+$ npm install -g @tsailab/xai
 ```
 
 ## Contribution 

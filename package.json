@@ -1,6 +1,6 @@
 {
-  "name": "@tsailab/loto-xai",
-  "version": "0.0.3",
+  "name": "@tsailab/xai",
+  "version": "0.0.0",
   "description": "The loto-xai is an openai nodejs sdk compatible extension library.",
   "main": "dist/cjs/index.js",
   "types": "types/index.d.ts",
@@ -46,7 +46,10 @@
   },
   "license": "LICENSE",
   "files": [
-    "dist/**/*"
+    "dist/*",
+    "types/*",
+    "README.md",
+    "LICENSE"
   ],
   "repository": {
     "type": "git",
