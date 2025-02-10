@@ -25,7 +25,7 @@
     "publish:only": "changeset publish --registry=https://registry.npmjs.com/",
     "vp": "pnpm pre-release && npx changeset version",
     "release": "pnpm publish:only",
-    "push:changelog": "node bin/scripts/push-changelog.mjs",
+    "push:changelog": "node build/scripts/push-changelog.mjs",
     "prepare": "husky"
   },
   "publishConfig": {
