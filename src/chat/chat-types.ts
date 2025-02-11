@@ -1,4 +1,5 @@
 import {
+  ChatCompletionAssistantMessageParam,
   ChatCompletionDeveloperMessageParam,
   ChatCompletionSystemMessageParam,
   ChatCompletionToolMessageParam,
@@ -14,10 +15,11 @@ export type ChatRoleExtendType = ChatRoleType | 'tool' | 'developer' | string;
  * front user request body messages
  */
 export type XaiChatRequestMessage =
-  | ChatCompletionDeveloperMessageParam
-  | ChatCompletionSystemMessageParam
-  | ChatCompletionUserMessageParam
-  | ChatCompletionToolMessageParam;
+| ChatCompletionDeveloperMessageParam
+| ChatCompletionSystemMessageParam
+| ChatCompletionUserMessageParam
+| ChatCompletionAssistantMessageParam
+| ChatCompletionToolMessageParam
 
 /**
  *
