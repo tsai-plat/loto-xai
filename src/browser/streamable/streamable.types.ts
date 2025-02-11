@@ -35,7 +35,7 @@ export type XaiStreamableOptions = {
   checkAuth?: boolean;
   apiBasePrefix?: string;
   debug?: boolean;
-  eventDataParsed?:boolean
+  eventDataParsed?: boolean;
   method?: FetchMethod | string;
   token?: string;
   bearerHeaders?: XaiBearerHeaders;
@@ -77,4 +77,4 @@ export interface XaiStreamCompleteData extends IXaiStreamCache {
  */
 export type StreamablePrepareCallback = (
   prepareRequestData: IXaiStreamCache,
-) => void
+) => void;

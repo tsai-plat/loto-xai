@@ -77,8 +77,8 @@ export class XaiStreamFetch {
   constructor(apiPath: string, options: XaiStreamableOptions) {
     if (!apiPath?.length) throw new Error(`Xai Streamable apiPath illegal.`);
     this.apiPath = apiPath;
-    const {fetch = globalFetch} = options
-    this.fetchFn = fetch
+    const { fetch = globalFetch } = options;
+    this.fetchFn = fetch;
     if (!this.fetchFn) throw new Error(`your enviroment no fetch.`);
 
     this._registListeners(options);
@@ -541,7 +541,6 @@ export class XaiStreamFetch {
         // empty line denotes end of message.
         // Trigger the callback and start a new message:
         if (message.data.length) {
-
           that.pushMessageCache(message);
 
           let chunkData: C | undefined;
@@ -562,7 +561,7 @@ export class XaiStreamFetch {
           }
 
           // TODO message
-          if(chunkData){
+          if (chunkData) {
             that.dispatchEvent('message', message);
             // that.dispatchEvent('message', chunkData)
           }
