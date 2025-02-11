@@ -1,5 +1,11 @@
 # @tsailab/xai
 
+## 0.0.8
+
+### Patch Changes
+
+- feat: SSE input body message add assistant role
+
 ## 0.0.7
 
 ### Patch Changes
