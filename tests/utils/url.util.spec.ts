@@ -4,7 +4,7 @@ import {
   OPENAI_CHAT_COMPLETIONS_PATH,
 } from '../../src/index';
 
-describe('Xai utils url tests', () => {
+describe('Xai [utils] url.util tests', () => {
   const baseUrl = DEEPSEEK_BASEURL;
   const deepseekChatUrl = `${baseUrl}/${OPENAI_CHAT_COMPLETIONS_PATH}`;
 

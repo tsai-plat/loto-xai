@@ -4,7 +4,7 @@ import {
   ChatCompletionToolMessageParam,
   ChatCompletionUserMessageParam,
 } from 'openai/resources/chat/completions';
-import { ModelProviderType } from 'src/ai-provider';
+import { ModelProviderType } from '../ai-provider';
 import { XaiModelBaseOption } from './model-types';
 
 export type ChatRoleType = 'user' | 'assistant' | 'system';
@@ -22,10 +22,9 @@ export type XaiChatRequestMessage =
 /**
  *
  */
-export type OpenaiChatBody = {
+export type XaiChatBody = {
   model?: string;
   messages?: Array<XaiChatRequestMessage>;
-  aiopts?: XaiModelBaseOption;
   [k: string]: any;
 };
 
@@ -35,7 +34,6 @@ export type XaiChatExtraData = {
   username?: string;
   ip?: string;
   cliid?: string | string[];
-  msgid?: string;
   [k: string]: any;
 };
 
@@ -48,11 +46,16 @@ export type XaiChatExtraData = {
  * @property compatible openai beta like systemMessage
  * @property extra is request header and extra data
  */
-export type XaiChatRequestBody = {
+export interface XaiChatRequestBody<
+  E extends XaiChatExtraData = XaiChatExtraData,
+  O extends XaiModelBaseOption = XaiModelBaseOption,
+> extends XaiChatBody {
   chatid: string;
   provider: ModelProviderType | string;
   uuid?: number;
   text?: string;
   instructions?: string;
-  extra?: XaiChatExtraData;
-} & OpenaiChatBody;
+  extra?: E;
+  template?: string;
+  aiopts?: O;
+}

@@ -19,7 +19,7 @@
     "format": "prettier \"**/**/*.{ts,js,json,tsx,mjs}\" --ignore-path ./.prettierignore --write",
     "lint": "eslint \"src/**/*.ts\" --fix",
     "lint-staged": "lint-staged",
-    "test": "jest --config ./jest.config.ts --runInBand --colors",
+    "test": "jest --config ./jest.config.ts --runInBand --colors --onlyChanged",
     "change:empty": "changeset add --empty",
     "prerelease": "pnpm format && pnpm build && pnpm test && pnpm vp",
     "publish:only": "changeset publish --registry=https://registry.npmjs.com/",
@@ -36,6 +36,8 @@
     "publish": false
   },
   "keywords": [
+    "xai",
+    "langchain",
     "openai-node",
     "nestjs",
     "sse",
@@ -68,9 +70,10 @@
     "@commitlint/config-conventional": "^19.7.1",
     "@commitlint/types": "^19.5.0",
     "@eslint/js": "^9.20.0",
+    "@jest/globals": "^29.7.0",
     "@types/jest": "^29.5.14",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^22.13.1",
+    "@types/node": "20.14.8",
     "eslint": "^9.20.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-import": "^2.31.0",
@@ -79,6 +82,7 @@
     "husky": "^9.1.7",
     "jest": "^29.7.0",
     "lint-staged": "^15.4.3",
+    "nanoid": "3.3.8",
     "openai": "^4.83.0",
     "prettier": "^3.5.0",
     "rimraf": "^6.0.1",
@@ -97,6 +101,7 @@
     ]
   },
   "peerDependencies": {
+    "nanoid": "^3.3.0||^5.0.9",
     "openai": "^4.83.0"
   }
 }

@@ -30,6 +30,7 @@ export default tseslint.config({
     globals: {
       ...globals.browser,
       ...globals.node,
+      ...globals.jest,
     },
   },
   plugins: {},
@@ -37,6 +38,18 @@ export default tseslint.config({
     'arrow-body-style': 'warn',
     'no-unused-expressions': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        'args': 'all',
+        'argsIgnorePattern': '^_',
+        'caughtErrors': 'all',
+        'caughtErrorsIgnorePattern': '^_',
+        'destructuredArrayIgnorePattern': '^_',
+        'varsIgnorePattern': '^_',
+        'ignoreRestSiblings': true,
+      },
+    ],
     // "@typescript-eslint/no-unused-expressions": "off"
   },
 });

@@ -1,3 +1,5 @@
+export const XAI_SSE_MESSAGE_STOP_VALUE = 'stop';
+
 /**
  * @public
  *  xai SSE message data struct
@@ -29,4 +31,14 @@ export type SseErrorData = {
   errcode?: string;
   errmsg: string;
   [k: string]: any;
+};
+
+/**
+ * SSE
+ */
+export type SseMessageType = {
+  id: string;
+  event: string;
+  data: string;
+  retry?: number;
 };
