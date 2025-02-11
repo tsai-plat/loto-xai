@@ -1,5 +1,11 @@
 # @tsailab/xai
 
+## 0.0.9
+
+### Patch Changes
+
+- refactor: remove xai streamble fetch
+
 ## 0.0.8
 
 ### Patch Changes
