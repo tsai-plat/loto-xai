@@ -22,6 +22,9 @@ export type XaiBearerHeaders = {
 
 /**
  * @public
+ *  SSE contructor options
+ * @property eventDataParsed if true onMessage will return
+ *  messageEvent.data as Object,otherwise
  * @property checkAuth is check Authorization in header
  * @property apiBasePrefix :/api/v1
  * @property token priority over bearerHeaders,use bearer potocol
@@ -32,6 +35,7 @@ export type XaiStreamableOptions = {
   checkAuth?: boolean;
   apiBasePrefix?: string;
   debug?: boolean;
+  eventDataParsed?:boolean
   method?: FetchMethod | string;
   token?: string;
   bearerHeaders?: XaiBearerHeaders;
@@ -64,3 +68,13 @@ export interface XaiStreamCompleteData extends IXaiStreamCache {
   costTime?: string;
   result: string;
 }
+
+/**
+ * @public
+ * @param prepareRequestData
+ *  Before the SSE launch request,prepare request body or header parameters
+ *  like reqid,msgid,pick user question and return by callback
+ */
+export type StreamablePrepareCallback = (
+  prepareRequestData: IXaiStreamCache,
+) => void

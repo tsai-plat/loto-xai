@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 import { SSE_ERROE_CODE, XaiError } from '../../error';
-import { EventStreamContentType } from '.';
+import { EventStreamContentType, globalFetch } from './index';
 import {
   SseMessageChunkData,
   SseMessageType,
@@ -19,6 +19,7 @@ import type {
   IXaiStreamCache,
   SseCallbackFn,
   SseEventType,
+  StreamablePrepareCallback,
   XaiStreamableOptions,
   XaiStreamableRequestData,
   XaiStreamCompleteData,
@@ -36,16 +37,6 @@ const defaultCloseHandler: SseCallbackFn = (data?: IXaiStreamCache): void => {
 const defaultErrorHandler: SseCallbackFn = (err: any) => {
   globalThis.console.error(`Xai streamable error`, err);
 };
-
-/**
- * @public
- * @param prepareRequestData
- *  Before the SSE launch request,prepare request body or header parameters
- *  like reqid,msgid,pick user question and return by callback
- */
-export type StreamablePrepareCallback = (
-  prepareRequestData: IXaiStreamCache,
-) => void;
 
 const MAX_LISTENERS = 3;
 const delayCloseMillionSeconds = 100;
@@ -86,8 +77,8 @@ export class XaiStreamFetch {
   constructor(apiPath: string, options: XaiStreamableOptions) {
     if (!apiPath?.length) throw new Error(`Xai Streamable apiPath illegal.`);
     this.apiPath = apiPath;
-    this.fetchFn = options.fetch ? options.fetch : globalThis.fetch;
-
+    const {fetch = globalFetch} = options
+    this.fetchFn = fetch
     if (!this.fetchFn) throw new Error(`your enviroment no fetch.`);
 
     this._registListeners(options);
@@ -550,7 +541,7 @@ export class XaiStreamFetch {
         // empty line denotes end of message.
         // Trigger the callback and start a new message:
         if (message.data.length) {
-          that.dispatchEvent('message', message);
+
           that.pushMessageCache(message);
 
           let chunkData: C | undefined;
@@ -568,6 +559,12 @@ export class XaiStreamFetch {
 
           if (chunkData?.content) {
             that.appendResult(chunkData.content);
+          }
+
+          // TODO message
+          if(chunkData){
+            that.dispatchEvent('message', message);
+            // that.dispatchEvent('message', chunkData)
           }
 
           if (chunkData?.finish_reason === XAI_SSE_MESSAGE_STOP_VALUE) {
