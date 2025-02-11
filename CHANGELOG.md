@@ -1,5 +1,11 @@
 # @tsailab/xai
 
+## 0.0.7
+
+### Patch Changes
+
+- fix fetch global
+
 ## 0.0.6
 
 ### Patch Changes
