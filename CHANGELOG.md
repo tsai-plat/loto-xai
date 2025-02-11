@@ -1,5 +1,11 @@
 # @tsailab/xai
 
+## 0.0.6
+
+### Patch Changes
+
+- Big broken : add SSE & xai types
+
 ## 0.0.5
 
 ### Patch Changes
