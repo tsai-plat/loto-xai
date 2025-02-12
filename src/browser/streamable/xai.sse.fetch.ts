@@ -1,8 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-expressions */
-import {
-  SseMessageChunkData,
-  SseMessageType,
-} from '../../chat/sse-types';
+import { SseMessageChunkData, SseMessageType } from '../../chat/sse-types';
 import { EventStreamContentType, globalFetch } from './index';
 import {
   FetchMethod,
@@ -552,7 +549,7 @@ export class XaiSseFetch {
 
           // Fix qianfan reason is normal but deepseek or gpt is stop
           // is_end is xai proxy translate to boolean
-          if (chunkData?.finish_reason||chunkData?.is_end) {
+          if (chunkData?.finish_reason || chunkData?.is_end) {
             setTimeout(() => {
               that.disconnect();
             }, delayCloseMillionSeconds);

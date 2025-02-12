@@ -1,5 +1,11 @@
 # @tsailab/xai
 
+## 0.0.10
+
+### Patch Changes
+
+- Fix: bug(xai) can not get expect complete status
+
 ## 0.0.9
 
 ### Patch Changes
