@@ -2,7 +2,6 @@
 import {
   SseMessageChunkData,
   SseMessageType,
-  XAI_SSE_MESSAGE_STOP_VALUE,
 } from '../../chat/sse-types';
 import { EventStreamContentType, globalFetch } from './index';
 import {
@@ -551,7 +550,9 @@ export class XaiSseFetch {
               : that.dispatchEvent('message', message);
           }
 
-          if (chunkData?.finish_reason === XAI_SSE_MESSAGE_STOP_VALUE) {
+          // Fix qianfan reason is normal but deepseek or gpt is stop
+          // is_end is xai proxy translate to boolean
+          if (chunkData?.finish_reason||chunkData?.is_end) {
             setTimeout(() => {
               that.disconnect();
             }, delayCloseMillionSeconds);

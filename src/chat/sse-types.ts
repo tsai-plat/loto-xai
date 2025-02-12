@@ -16,6 +16,7 @@ export type SseMessageChunkData = {
   content: string;
   errcode?: string;
   finish_reason?: string | null;
+  is_end?:boolean
   [k: string]: any;
 };
 
