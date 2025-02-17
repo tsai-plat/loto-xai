@@ -148,6 +148,7 @@ export class XaiSseFetch {
   public async connect<
     D extends XaiStreamableRequestData = XaiStreamableRequestData,
   >(data: D, cb?: StreamablePrepareCallback): Promise<XaiSseFetch> {
+    this.log(`Start debug connect >>>>>`,'log')
     // ignore inprogress
     if (this.inprogress) {
       this.log(`Preovus Requset ${this.reqid} had inprogress.`, 'error');
