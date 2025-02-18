@@ -148,7 +148,7 @@ export class XaiSseFetch {
   public async connect<
     D extends XaiStreamableRequestData = XaiStreamableRequestData,
   >(data: D, cb?: StreamablePrepareCallback): Promise<XaiSseFetch> {
-    this.log(`Start debug connect >>>>>`,'log')
+    this.log(`Start debug connect >>>>>`, 'log');
     // ignore inprogress
     if (this.inprogress) {
       this.log(`Preovus Requset ${this.reqid} had inprogress.`, 'error');
@@ -193,6 +193,10 @@ export class XaiSseFetch {
       });
 
       if (!response.ok) {
+        this.log(
+          `Start debug connect contentType>>>>>${response.ok} ${response?.statusText}`,
+          'log',
+        );
         throw SseFetchError.newClientError(
           response.status,
           response.statusText,
@@ -201,6 +205,7 @@ export class XaiSseFetch {
       this.fetchInprogress = true;
       const contentType = await response.headers.get('Content-Type');
       if (!contentType?.includes(EventStreamContentType)) {
+        this.log(`Start debug connect contentType>>>>>${contentType}`, 'log');
         throw SseFetchError.newClientError(
           SSE_ERROE_CODE,
           'Please check remote api is SSE mode.',
