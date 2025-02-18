@@ -8,19 +8,19 @@ import {
 } from '../../../src/browser';
 
 describe(`Xai [bot] helper tests`, () => {
-    const testModel :XaiModelType = {
-        provider:'qianwen',
-        model:'qianw-vl',
-        modelId:'qianwen@qianw-vl_1.5',
-        modelName: 'Qianwen VL 1.5'
-    }
+  const testModel: XaiModelType = {
+    provider: 'qianwen',
+    model: 'qianw-vl',
+    modelId: 'qianwen@qianw-vl_1.5',
+    modelName: 'Qianwen VL 1.5',
+  };
 
-    const pet: XaiAgentPET= {
-        uuid:1000,
-        title:'Test Agent',
-        modelId:'qianwen@qianw-vl_1.5',
-        group:'test'
-    }
+  const pet: XaiAgentPET = {
+    uuid: 1000,
+    title: 'Test Agent',
+    modelId: 'qianwen@qianw-vl_1.5',
+    group: 'test',
+  };
   it(`should return an default message with chatid ${defaultChatid}`, () => {
     const agent: ChatbotAgent = createDefaultChatbotAgent(
       {
@@ -38,9 +38,9 @@ describe(`Xai [bot] helper tests`, () => {
     expect(agent.chatid).toStrictEqual(defaultChatid);
   });
 
-  it(`Create new agent should no chat message`,()=>{
-    const newAgent = newChatbotAgent(testModel,pet)
+  it(`Create new agent should no chat message`, () => {
+    const newAgent = newChatbotAgent(testModel, pet);
 
-    expect(newAgent.data.length).toBe(0)
-  })
+    expect(newAgent.data.length).toBe(0);
+  });
 });

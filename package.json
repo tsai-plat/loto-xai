@@ -1,6 +1,6 @@
 {
   "name": "@tsailab/xai",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "description": "The loto-xai is an openai nodejs sdk compatible extension library.",
   "main": "dist/cjs/index.js",
   "types": "types/index.d.ts",
