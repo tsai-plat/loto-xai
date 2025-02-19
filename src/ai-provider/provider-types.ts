@@ -10,6 +10,7 @@ export type ModelProviderType =
   | 'qianwen'
   | 'stabilityai'
   | 'tecent'
+  | 'siliconflow'
   | 'vidu'
   | string;
 
@@ -32,3 +33,12 @@ export type XaiModelType = {
   icon?: string;
   [k: string]: any;
 };
+
+export type XaiBaseConfigSchema = {
+  cfgid:string
+  name:string
+  provider:ModelProviderType
+  baseUrl:string
+  apiKey:string
+  model?:string
+}
