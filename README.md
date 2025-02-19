@@ -19,6 +19,86 @@
 $ npm install -g @tsailab/xai
 ```
 
+## Usage
+
+> browser front SSE fetch
+
+```ts
+
+  // abort request
+  let controller = new AbortController()
+
+  // SSE request body data
+  const sseBody: XaiStreamableRequestData = {
+    controller,
+    chatid: 'xai-chatid-001', // required string ,your front app chat id
+    provider: 'deepseek', // which provide api service 
+    model, // model id 
+    uuid, // required number 
+    // text: prompt.value, front user input text or handler messages 
+    messages: [ // see openai message
+      {
+        role: 'user',
+        content: 'who are you?', 
+      },
+    ],
+  }
+
+  // the SSE streamable response chunk appending text
+  let fullResult:string = ''
+
+  const sseClient = new XaiSseFetch(
+    apiPath:'http://127.0.0.1:8964/v1',
+    { 
+      apiBasePrefix:'chat/completions',
+      eventDataParsed:true, // control return chunk parsed to JSON Object OR string
+      debug: true, // if true will print some log
+      // handle streamable chunk content,add update chat result text typed.
+      onmessage:(chunk:any) => {
+        console.log(chunk, `onMessage>>>>>>>>>>>${typeof chunk}`)
+        // if eventDataParsed=false chunk is string
+        try{
+          const {content} = JSON.parse(chunk)
+
+          fullResult = fullResult + content
+        }catch(_){
+
+        }
+
+        // if eventDataParsed=true chunk is object
+        fullResult = fullResult + chunk.content
+
+      },
+      onerror: (err: any) => {
+        console.log(err, '<<<<<>>>>Error>>>>')
+      },
+      oncancel: () => {
+        console.log('>>>>>>>>>>>>>Cancel>>>>>>')
+      },
+      onclose: () => {
+        console.log('>>>>>>>Closed>>>>>')
+      },
+    }
+  )
+
+  // launch SSE fetch
+  await cli.connect(sseBody, (cache: any) => {
+      // first connect handle ssebody merge remote model options 
+      console.log('>>>>>>> preconnect>> cache>>>', cache)
+  })
+
+
+```
+
+> front localstore helper 
+
+```ts
+newChatbotAgent(...)
+createNewUserMessage(...)
+createInitAssistantMessage(...)
+updateSomeChatbotMessage(...)
+```
+
 ## Contribution 
 
 > the `Code` submission specifications follow angular standards
