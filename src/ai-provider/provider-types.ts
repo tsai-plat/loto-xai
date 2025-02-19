@@ -35,10 +35,10 @@ export type XaiModelType = {
 };
 
 export type XaiBaseConfigSchema = {
-  cfgid:string
-  name:string
-  provider:ModelProviderType
-  baseUrl:string
-  apiKey:string
-  model?:string
-}
+  cfgid: string;
+  name: string;
+  provider: ModelProviderType;
+  baseUrl: string;
+  apiKey: string;
+  model?: string;
+};

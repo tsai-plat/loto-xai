@@ -1,5 +1,11 @@
 # @tsailab/xai
 
+## 0.1.1
+
+### Patch Changes
+
+- add config schema
+
 ## 0.1.0
 
 ### Minor Changes
